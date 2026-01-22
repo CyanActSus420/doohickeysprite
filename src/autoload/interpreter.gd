@@ -17,6 +17,18 @@ func interpret(line:Array, lines:Array):
 			Evaluator.bytes[int(line[2])] = ByteValue
 		"PRINT":
 			print(Evaluator.bytes[int(line[1])])
+		"SAY":
+			var intArray = []
+			for shit in line:
+				if shit != "SAY":
+					intArray.push_back(String.chr(Evaluator.bytes[int(shit)]))
+			
+			var finalString = ""
+			
+			for letter in intArray:
+				finalString += letter
+			
+			print(finalString)
 		# math
 		"ADD":
 			var byte_one = Evaluator.bytes[int(line[1])]

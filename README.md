@@ -31,6 +31,9 @@ MOVE [BYTE] [TARGET]
 PRINT [BYTE]
  - prints out the value of a byte into the console
 
+SAY [BYTES]
+ - prints out a collection of bytes as a long string
+
 ADD/SUB/DIV/MUL [BYTE1] [BYTE2] [TARGET]
  - adds/subtracts/divides/multiplies 2 bytes together and saves the result to another byte
 
