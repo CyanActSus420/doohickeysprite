@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxjl342owc8d"]
+
+[ext_resource type="Script" uid="uid://byyjee0jcid0l" path="res://src/main.gd" id="1_elqb8"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_elqb8")
+
+[node name="PixelStorage" type="Node2D" parent="."]

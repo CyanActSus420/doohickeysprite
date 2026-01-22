@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgnps7ogqslxl"]
+
+[ext_resource type="Script" uid="uid://c04cgldnllh7g" path="res://src/classes/Pixel.gd" id="1_poo2m"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kkipm"]
+
+[node name="Pixel" type="Node2D"]
+script = ExtResource("1_poo2m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1.0
+offset_bottom = 1.0
+texture = SubResource("CanvasTexture_kkipm")
