@@ -23,6 +23,9 @@ func _ready() -> void:
 		print("Loaded color palette: %s" % args["color_palette"])
 		var colors:String = FileAccess.open("./%s" % args["color_palette"], FileAccess.READ).get_as_text()
 		Global.setColorPalette(colors)
+	if args.has("wait_time"):
+		print("Program Counter wait time: %s" % args["wait_time"])
+		Evaluator.wait_time = args["wait_time"]
 	
 	if !FileAccess.file_exists(target):
 		push_error("File %s doesn't exist!" % target)
