@@ -1,0 +1,73 @@
+DEF xline ; uses the following bytes: 10 -> start, 11 -> length, 12 -> end (calculated automatically), 13 -> color, 14 -> iterate (calculated automatically), 15 -> y
+
+ADD 10 11 12 ; calculate the end of the line
+ADD 10 0 14
+
+DRAW 14 15 13
+ADD 1 14 14
+NOT 14 12 5
+
+END
+
+DEF yline ; uses the following bytes: 10 -> start, 11 -> length, 12 -> end (calculated automatically), 13 -> color, 14 -> iterate (calculated automatically), 15 -> x
+
+ADD 10 11 12 ; calculate the end of the line
+ADD 10 0 14
+
+DRAW 15 14 13
+ADD 1 14 14
+NOT 14 12 16
+
+END
+
+SET 1 1
+
+SET 3 10
+SET 2 11
+SET 8 13
+SET 1 15
+CALL yline
+
+SET 7 10
+SET 2 11
+SET 8 13
+SET 1 15
+CALL yline
+
+SET 3 2
+SET 3 3
+DRAW 2 3 13
+
+SET 7 3
+DRAW 2 3 13
+
+SET 4 10
+SET 4 11
+SET 8 13
+SET 2 15
+CALL xline
+
+SET 4 10
+SET 4 11
+SET 8 13
+SET 8 15
+CALL xline
+
+SET 3 10
+SET 2 11
+SET 8 13
+SET 8 15
+CALL yline
+
+
+SET 6 10
+SET 2 11
+SET 8 13
+SET 8 15
+CALL yline
+
+SET 6 10
+SET 2 11
+SET 8 13
+SET 5 15
+CALL xline
