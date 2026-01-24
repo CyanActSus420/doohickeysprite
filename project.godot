@@ -32,7 +32,7 @@ window/stretch/mode="viewport"
 
 [editor]
 
-run/main_run_args="--wait_time=0.1"
+run/main_run_args="--wait_time=0.05"
 
 [rendering]
 

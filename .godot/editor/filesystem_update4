@@ -1,4 +1,3 @@
-res://src/main.gd
 res://scenes/Main.tscn
 res://main.txt
-res://src/autoload/evaluator.gd
+res://src/autoload/interpreter.gd
