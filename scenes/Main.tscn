@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwxjl342owc8d"]
+[gd_scene format=3 uid="uid://cwxjl342owc8d"]
 
 [ext_resource type="Script" uid="uid://byyjee0jcid0l" path="res://src/main.gd" id="1_elqb8"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=447663678]
 script = ExtResource("1_elqb8")
 
-[node name="PixelStorage" type="Node2D" parent="."]
+[node name="PixelStorage" type="Node2D" parent="." unique_id=1123157025]
 
-[node name="EvaluationStart" type="Timer" parent="."]
+[node name="EvaluationStart" type="Timer" parent="." unique_id=1281662596]
 wait_time = 0.1
 one_shot = true
 autostart = true
