@@ -1,0 +1,5 @@
+res://scenes/Main.tscn
+res://src/autoload/interpreter.gd
+res://src/autoload/evaluator.gd
+res://main.txt
+res://README.md
