@@ -65,7 +65,4 @@ IF [BYTE] [EXPECTED BYTE] [LINE TO JUMP TO]
 NOT [BYTE] [EXPECTED BYTE] [LINE TO JUMP TO]
  - jumps to a specific line of code if a specified byte is NOT equal to the value of the given byte
 
-WAIT [BYTE]
- - waits the value of a byte in milliseconds
-
 i'll make a proper documentation and readme file later, for now just ask me shit on discord

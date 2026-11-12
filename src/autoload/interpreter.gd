@@ -94,8 +94,6 @@ func interpret(line:Array, lines:Array):
 		# other
 		"JUMP":
 			Evaluator.pc = int(line[1]) - 1
-		"WAIT":
-			Evaluator.temporary_wait_time = float(Evaluator.bytes[int(line[1])]) / 1000
 		";": pass
 		_:
 			push_error("Invalid Token!")

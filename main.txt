@@ -11,14 +11,5 @@ PRINT 0
 ; sets byte 2 to 5
 SET 5 2
 
-; sets byte 1 to 500
-SET 500 1
-
-; waits 500ms
-WAIT 1
-
-; prints byte 2
-PRINT 2
-
 ; draws a pixel at coordinates x = byte 2 and y = byte 2, with color set to whatever byte 2 is (in our case, 5)
 DRAW 2 2 2
