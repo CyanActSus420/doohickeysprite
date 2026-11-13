@@ -1,7 +1,7 @@
 extends Node
 
 # "line" is an array of tokens.
-func interpret(line:Array, lines:Array):
+func interpret(line:Array):
 	if line == [""] or line == [" "]:
 		return # empty line, do nothing
 	
@@ -63,7 +63,7 @@ func interpret(line:Array, lines:Array):
 			var curFunctionDefinition = FunctionData.new()
 			curFunctionDefinition.FunctionName = line[1]
 			curFunctionDefinition.StartingLine = Evaluator.pc
-			while lines[Evaluator.pc].split(" ")[0] != "END":
+			while Evaluator.lines[Evaluator.pc].split(" ")[0] != "END":
 				Evaluator.pc += 1
 			
 			curFunctionDefinition.EndingLine = Evaluator.pc
@@ -77,9 +77,9 @@ func interpret(line:Array, lines:Array):
 			Evaluator.pc = func_data.StartingLine + 1
 			
 			while Evaluator.pc != func_data.EndingLine:
-				var curLine = lines[Evaluator.pc].split(" ")
+				var curLine = Evaluator.lines[Evaluator.pc].split(" ")
 				
-				interpret(curLine, lines)
+				interpret(curLine)
 				Evaluator.pc += 1
 			
 			Evaluator.pc = Evaluator.remembered_pc_positions[0]
@@ -94,6 +94,8 @@ func interpret(line:Array, lines:Array):
 		# other
 		"JUMP":
 			Evaluator.pc = int(line[1]) - 1
+		"WAIT":
+			Evaluator.temporary_wait_time = float(Evaluator.bytes[int(line[1])]) / 1000
 		";": pass
 		_:
 			push_error("Invalid Token!")
