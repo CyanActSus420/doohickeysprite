@@ -28,11 +28,16 @@ var colors:Array[Color] = [
 const PIXEL = preload("uid://dgnps7ogqslxl")
 
 func DrawPixel(x:int, y:int, color:int):
-	var curPixel = PIXEL.instantiate()
-	curPixel.position.x = x - 1
-	curPixel.position.y = y - 1
-	curPixel.update_pixel(colors[color - 1])
-	main.pixel_storage.add_child(curPixel)
+	var pixel = get_node("/root/Main/PixelStorage/[%s, %s]" % [x, y])
+	if pixel == null:
+		var curPixel = PIXEL.instantiate()
+		curPixel.position.x = x - 1
+		curPixel.position.y = y - 1
+		curPixel.name = "[%s, %s]" % [x, y]
+		curPixel.update_pixel(colors[color - 1])
+		main.pixel_storage.add_child(curPixel)
+	else:
+		pixel.update_pixel(colors[color - 1])
 
 func ClearPixels():
 	main.ClearScreen()

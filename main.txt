@@ -22,3 +22,15 @@ PRINT 2
 
 ; draws a pixel at coordinates x = byte 2 and y = byte 2, with color set to whatever byte 2 is (in our case, 5)
 DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
+DRAW 2 2 2
